@@ -18,11 +18,14 @@ class OtpVerification:
     def enryption(self,word):
         return hashlib.sha256(word.encode()).hexdigest()
 
+    def mail_patt_ver(self):
+        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        return re.match(pattern, self.user_mail)
+
     def get_mail(self):  #Prompts the user to input their email and Validates it using a regex pattern and it Loops until a valid email is entered.
         while True:
-            self.user_mail = input("Enter your email: ").strip()
-            pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-            if re.match(pattern, self.user_mail):
+            self.user_mail = input("Enter your email: ").strip()        
+            if self.mail_patt_ver():
                 print("Valid email address.")
                 return
             else:
