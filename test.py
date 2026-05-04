@@ -2,7 +2,7 @@ import streamlit as st
 import csv
 
 #pip install streamlit
-# Define the path to the CSV file
+# Define the path to the CSV 
 CSV_FILE = "tasks.csv"
 
 # Define the main function
