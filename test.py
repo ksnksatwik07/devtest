@@ -7,7 +7,7 @@ CSV_FILE = "tasks.csv"
 
 # Define the main function
 def main():
-    # Set the title of the web app
+    # Set the title of the web 
     st.title("To-Do List")
     st.markdown(
          f"""
